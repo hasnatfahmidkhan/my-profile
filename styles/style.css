@@ -31,10 +31,47 @@
   color: #fff;
   background-color: #0e4063;
   transition: all 0.4s ease-in;
+  position: relative;
+  overflow: hidden;
 }
 
+.img-container,
+.title,
+.followers,
+.card-content,
+.skills-container,
+.button-container {
+  z-index: 111;
+}
+
+/* hover effect  */
 .profile-card:hover {
   box-shadow: rgba(24, 127, 206, 0.74) 0px 5px 15px;
+}
+
+/* animation  */
+.profile-card::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 150%;
+  background: linear-gradient(#00aeffc5, #03ebc4c7);
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.profile-card::after {
+  content: "";
+  position: absolute;
+  /* always give container background color  */
+  background: #0e4063;
+  border-radius: 15px;
+  inset: 3px;
 }
 
 .img-container {
