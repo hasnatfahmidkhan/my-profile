@@ -33,7 +33,6 @@
   transition: all 0.4s ease-in;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .img-container,
